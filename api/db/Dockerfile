@@ -1,2 +1,6 @@
-FROM mysql
-ENV MYSQL_ROOT_PASSWORD senhaparaacessar
+FROM mysql:5.7.35
+ENV MYSQL_ROOT_PASSWORD senhalogin
+ENV MYSQL_MAJOR 5.7
+ENV MYSQL_VERSION 5.7.35-1debian10
+
+

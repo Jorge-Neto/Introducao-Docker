@@ -6,7 +6,7 @@ const app = express();
 const connection = mysql.createConnection({
   host: 'mysql-container',
   user: 'root',
-  password: 'senhaparaacessar',
+  password: 'senhalogin',
   database: 'cart'
 });
 
@@ -16,6 +16,8 @@ app.get('/products', function (req, res) {
   connection.query('SELECT * FROM products', function (error, results) {
 
     if (error) {
+      console.log(error)
+      res.send(error)
       throw error
     };
 
